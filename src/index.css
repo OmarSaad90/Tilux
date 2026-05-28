@@ -8,14 +8,16 @@
 @theme {
   --font-sans: 'Outfit', system-ui, sans-serif;
 
-  --color-abyss:          #0A0E1A;
-  --color-abyss-mid:      #111829;
-  --color-abyss-surface:  #192037;
-  --color-abyss-elevated: #212C44;
+  --color-canvas:         #F4F6F4;
 
-  --color-frost:          #E8EFF8;
-  --color-frost-dim:      #96AECB;
-  --color-frost-muted:    #546E8A;
+  --color-abyss:          #1A3028;
+  --color-abyss-mid:      #1F3A30;
+  --color-abyss-surface:  #243D32;
+  --color-abyss-elevated: #2A4438;
+
+  --color-frost:          #E8F0EB;
+  --color-frost-dim:      #96B8A4;
+  --color-frost-muted:    #547A66;
 
   --color-accent:         #C8925A;
   --color-accent-light:   #D9A56D;
@@ -33,8 +35,8 @@ html {
 }
 
 body {
-  background-color: #0A0E1A;
-  color: #E8EFF8;
+  background-color: #F4F6F4;
+  color: #1A3028;
   margin: 0;
   overflow-x: hidden;
 }
@@ -60,18 +62,44 @@ body::before {
     display: none;
   }
 
-  /* Tile grid texture — apply to sections where brand relevance is clear */
-  .tile-texture {
+  /* Beveled grout + glazed ceramic sheen — B+C combined tile surface */
+  .tile-surface {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
-    background-size: 48px 48px;
+      /* Glazed sheen: highlight at top-left of each tile face */
+      radial-gradient(ellipse 55% 55% at 25% 25%, rgba(255,255,255,0.18) 0%, transparent 100%),
+      /* Horizontal bevel: 2px dark shadow + 2px soft white highlight */
+      linear-gradient(rgba(26,48,40,0.22) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px),
+      /* Vertical bevel: 2px dark shadow + 2px soft white highlight */
+      linear-gradient(90deg, rgba(26,48,40,0.22) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px);
+    background-size: 180px 180px;
   }
 
+  /* CTA section — copper beveled grout */
   .tile-texture-accent {
     background-image:
-      linear-gradient(rgba(200, 146, 90, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200, 146, 90, 0.08) 1px, transparent 1px);
-    background-size: 48px 48px;
+      radial-gradient(ellipse 55% 55% at 25% 25%, rgba(255,255,255,0.16) 0%, transparent 100%),
+      linear-gradient(rgba(200,146,90,0.28) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px),
+      linear-gradient(90deg, rgba(200,146,90,0.28) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px);
+    background-size: 180px 180px;
+  }
+
+  /* Subway/brick — 160×80 rectangles, alternate rows staggered by half */
+  .tile-subway {
+    background-image:
+      radial-gradient(ellipse 55% 55% at 25% 25%, rgba(255,255,255,0.18) 0%, transparent 100%),
+      linear-gradient(rgba(26,48,40,0.22) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px),
+      linear-gradient(90deg, rgba(26,48,40,0.22) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px),
+      linear-gradient(90deg, rgba(26,48,40,0.22) 2px, rgba(255,255,255,0.80) 2px, rgba(255,255,255,0.80) 4px, transparent 4px);
+    background-size: 160px 80px, 160px 80px, 160px 160px, 160px 160px;
+    background-position: 0 0, 0 0, 0 0, 80px 80px;
+  }
+
+  /* Fine mosaic — 70px squares, thinner 1px grout */
+  .tile-mosaic {
+    background-image:
+      radial-gradient(ellipse 55% 55% at 25% 25%, rgba(255,255,255,0.14) 0%, transparent 100%),
+      linear-gradient(rgba(26,48,40,0.18) 1px, rgba(255,255,255,0.70) 1px, rgba(255,255,255,0.70) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(26,48,40,0.18) 1px, rgba(255,255,255,0.70) 1px, rgba(255,255,255,0.70) 2px, transparent 2px);
+    background-size: 70px 70px;
   }
 }

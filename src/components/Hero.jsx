@@ -27,7 +27,7 @@ export default function Hero() {
         />
         <div
           className="absolute bottom-0 -left-40 rounded-full"
-          style={{ width: 500, height: 500, background: 'radial-gradient(circle, rgba(232,239,248,0.04) 0%, transparent 70%)' }}
+          style={{ width: 500, height: 500, background: 'radial-gradient(circle, rgba(26,48,40,0.05) 0%, transparent 70%)' }}
         />
       </div>
 
@@ -42,13 +42,13 @@ export default function Hero() {
             >
               <span
                 className="block text-5xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight leading-[1.04] mb-2"
-                style={{ color: '#E8EFF8' }}
+                style={{ color: '#1A3028' }}
               >
                 Tile work done right,
               </span>
               <span
                 className="block text-4xl md:text-5xl lg:text-[3.5rem] font-light tracking-[0.02em] leading-[1.1]"
-                style={{ color: 'rgba(232,239,248,0.45)' }}
+                style={{ color: 'rgba(26,48,40,0.4)' }}
               >
                 every single time.
               </span>
@@ -57,7 +57,7 @@ export default function Hero() {
             <motion.p
               {...motion_props(0.4)}
               className="text-base md:text-lg leading-relaxed mb-10"
-              style={{ maxWidth: '50ch', color: 'rgba(232,239,248,0.65)' }}
+              style={{ maxWidth: '50ch', color: 'rgba(26,48,40,0.62)' }}
             >
               Expert tile installation for kitchens, bathrooms, and living spaces.
               Precision craftsmanship on every project, no shortcuts taken.
@@ -94,15 +94,15 @@ export default function Hero() {
               </a>
               <a
                 href="#gallery"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border text-frost text-sm transition-all duration-500"
-                style={{ borderColor: 'rgba(255,255,255,0.16)' }}
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border text-abyss text-sm transition-all duration-500"
+                style={{ borderColor: 'rgba(26,48,40,0.22)' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.24)'
+                  e.currentTarget.style.backgroundColor = 'rgba(26,48,40,0.06)'
+                  e.currentTarget.style.borderColor = 'rgba(26,48,40,0.32)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent'
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.16)'
+                  e.currentTarget.style.borderColor = 'rgba(26,48,40,0.22)'
                 }}
               >
                 View Our Work
@@ -122,9 +122,9 @@ export default function Hero() {
               <div
                 className="p-2 rounded-[2rem]"
                 style={{
-                  background: 'linear-gradient(135deg, #1A2238 0%, #151D30 100%)',
-                  border: '1px solid rgba(200,146,90,0.12)',
-                  boxShadow: '0 0 0 1px rgba(255,255,255,0.04) inset, 0 0 120px rgba(200,146,90,0.12), 0 40px 80px rgba(0,0,0,0.6), 0 16px 32px rgba(0,0,0,0.4)',
+                  background: 'linear-gradient(135deg, #1F3A30 0%, #162B22 100%)',
+                  border: '1px solid rgba(200,146,90,0.15)',
+                  boxShadow: '0 0 0 1px rgba(232,240,235,0.05) inset, 0 0 120px rgba(200,146,90,0.15), 0 40px 80px rgba(0,0,0,0.45), 0 16px 32px rgba(0,0,0,0.3)',
                 }}
               >
                 {/* Inner core */}
@@ -138,7 +138,7 @@ export default function Hero() {
                   />
                   <div
                     className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to top, rgba(10,14,26,0.6) 0%, transparent 50%)' }}
+                    style={{ background: 'linear-gradient(to top, rgba(26,48,40,0.6) 0%, transparent 50%)' }}
                   />
                 </div>
               </div>
@@ -147,23 +147,23 @@ export default function Hero() {
               <motion.div
                 className="absolute -bottom-5 -left-4 px-5 py-3.5 rounded-2xl"
                 style={{
-                  background: 'rgba(17,24,41,0.95)',
-                  border: '1px solid rgba(255,255,255,0.12)',
+                  background: 'rgba(26,48,40,0.96)',
+                  border: '1px solid rgba(255,255,255,0.1)',
                   backdropFilter: 'blur(24px)',
                   WebkitBackdropFilter: 'blur(24px)',
-                  boxShadow: '0 0 0 1px rgba(200,146,90,0.08) inset, 0 12px 40px rgba(0,0,0,0.5)',
+                  boxShadow: '0 0 0 1px rgba(200,146,90,0.08) inset, 0 12px 40px rgba(0,0,0,0.4)',
                 }}
                 initial={prefersReducedMotion ? false : { opacity: 0, y: 20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.8, delay: 1.1, ease: [0.19, 1.0, 0.22, 1.0] }}
               >
-                <div className="text-[11px] mb-0.5 uppercase tracking-wide font-medium" style={{ color: 'rgba(232,239,248,0.5)' }}>Latest project</div>
-                <div className="text-sm font-semibold" style={{ color: '#E8EFF8' }}>Kitchen renovation, Toronto</div>
+                <div className="text-[11px] mb-0.5 uppercase tracking-wide font-medium" style={{ color: 'rgba(232,240,235,0.55)' }}>Latest project</div>
+                <div className="text-sm font-semibold" style={{ color: '#E8F0EB' }}>Kitchen renovation, Toronto</div>
               </motion.div>
 
               {/* Floating accent dot */}
               <div
-                className="absolute -top-3 -right-3 w-12 h-12 rounded-full border-4 border-abyss"
+                className="absolute -top-3 -right-3 w-12 h-12 rounded-full border-4 border-canvas"
                 style={{
                   background: '#C8925A',
                   boxShadow: '0 0 24px rgba(200,146,90,0.4), 0 4px 16px rgba(0,0,0,0.3)',

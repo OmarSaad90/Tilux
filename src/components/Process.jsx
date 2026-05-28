@@ -40,10 +40,10 @@ export default function Process() {
             <span className="inline-block text-[11px] font-medium text-accent uppercase tracking-[0.2em] mb-5">
               How it works
             </span>
-            <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
               Three steps to a
               <br />
-              <span className="text-frost-dim font-light">finished floor.</span>
+              <span className="text-abyss/45 font-light">finished floor.</span>
             </h2>
           </motion.div>
         </div>
@@ -61,7 +61,7 @@ export default function Process() {
               <motion.div
                 key={step.number}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start py-10"
-                style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(255,255,255,0.06)' } : {}}
+                style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(26,48,40,0.1)' } : {}}
                 initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -83,12 +83,12 @@ export default function Process() {
 
                 {/* Title */}
                 <div className="lg:col-span-3">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-frost">{step.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-semibold text-abyss">{step.title}</h3>
                 </div>
 
                 {/* Description */}
                 <div className="lg:col-span-7 lg:col-start-5">
-                  <p className="text-base text-frost-dim leading-relaxed">{step.description}</p>
+                  <p className="text-base text-abyss/60 leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}

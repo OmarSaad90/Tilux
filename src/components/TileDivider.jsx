@@ -2,7 +2,7 @@ export default function TileDivider({ tone = 'neutral' }) {
   const lineColor =
     tone === 'accent'
       ? 'rgba(200,146,90,0.22)'
-      : 'rgba(255,255,255,0.055)'
+      : 'rgba(26,48,40,0.1)'
 
   return (
     <div

@@ -51,16 +51,16 @@ export default function Services() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
             Every room,
-            <span className="text-frost-dim font-light"> handled.</span>
+            <span className="text-abyss/45 font-light"> handled.</span>
           </h2>
         </motion.div>
 
         {/* Bento grid — grout-line treatment: container bg shows as grout between tiles */}
         <div
           className="p-1.5 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-1.5 lg:grid-rows-[320px_320px_280px]"
-          style={{ background: '#1B2336' }}
+          style={{ background: '#1A3028' }}
         >
           {services.map((service, i) => (
             <motion.div
@@ -90,7 +90,7 @@ export default function Services() {
                 <div className="flex items-end justify-between gap-4">
                   <div>
                     <h3 className="text-xl md:text-2xl font-semibold text-frost mb-2">{service.title}</h3>
-                    <p className="text-sm text-frost-dim leading-relaxed" style={{ maxWidth: '48ch' }}>
+                    <p className="text-sm text-frost/75 leading-relaxed" style={{ maxWidth: '48ch' }}>
                       {service.description}
                     </p>
                   </div>

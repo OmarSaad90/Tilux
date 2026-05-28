@@ -40,12 +40,12 @@ export default function Features() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight mb-6">
               Why clients
               <br />
-              <span className="text-frost-dim font-light">choose Tilux.</span>
+              <span className="text-abyss/45 font-light">choose Tilux.</span>
             </h2>
-            <p className="text-base text-frost-dim leading-relaxed mb-8" style={{ maxWidth: '42ch' }}>
+            <p className="text-base text-abyss/60 leading-relaxed mb-8" style={{ maxWidth: '42ch' }}>
               We are not the cheapest option. We are the one you call when you want it done
               properly the first time.
             </p>
@@ -66,7 +66,7 @@ export default function Features() {
                 <motion.div
                   key={feature.title}
                   className="flex gap-5 py-8"
-                  style={i < features.length - 1 ? { borderBottom: '1px solid rgba(255,255,255,0.07)' } : {}}
+                  style={i < features.length - 1 ? { borderBottom: '1px solid rgba(26,48,40,0.08)' } : {}}
                   initial={prefersReducedMotion ? false : { opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
@@ -79,8 +79,8 @@ export default function Features() {
                     <Icon size={20} weight="light" className="text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-frost mb-1.5">{feature.title}</h3>
-                    <p className="text-sm text-frost-dim leading-relaxed">{feature.description}</p>
+                    <h3 className="text-base font-semibold text-abyss mb-1.5">{feature.title}</h3>
+                    <p className="text-sm text-abyss/60 leading-relaxed">{feature.description}</p>
                   </div>
                 </motion.div>
               )

@@ -18,10 +18,10 @@ export default function CTASection() {
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl text-frost text-sm placeholder-frost-dim focus:outline-none focus:ring-2 focus:ring-[rgba(200,146,90,0.5)] transition-all duration-200'
+    'w-full px-4 py-3 rounded-xl text-abyss text-sm placeholder-[rgba(26,48,40,0.4)] focus:outline-none focus:ring-2 focus:ring-[rgba(200,146,90,0.5)] transition-all duration-200'
   const inputStyle = {
-    background: 'rgba(255,255,255,0.05)',
-    border: '1px solid rgba(255,255,255,0.1)',
+    background: 'rgba(26,48,40,0.04)',
+    border: '1px solid rgba(26,48,40,0.12)',
   }
 
   return (
@@ -40,12 +40,12 @@ export default function CTASection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight mb-6">
               Ready to start
               <br />
-              <span className="text-frost-dim font-light">your project?</span>
+              <span className="text-abyss/45 font-light">your project?</span>
             </h2>
-            <p className="text-base text-frost-dim leading-relaxed mb-10" style={{ maxWidth: '44ch' }}>
+            <p className="text-base text-abyss/60 leading-relaxed mb-10" style={{ maxWidth: '44ch' }}>
               Book a free site consultation. We visit your space, take measurements, and
               deliver a detailed quote within 48 hours.
             </p>
@@ -57,8 +57,8 @@ export default function CTASection() {
                 { label: 'Service area', value: 'Greater Toronto Area and beyond' },
               ].map(({ label, value }) => (
                 <div key={label}>
-                  <div className="text-[11px] text-frost-muted uppercase tracking-[0.15em] mb-0.5">{label}</div>
-                  <div className="text-sm text-frost-dim">{value}</div>
+                  <div className="text-[11px] text-abyss/45 uppercase tracking-[0.15em] mb-0.5">{label}</div>
+                  <div className="text-sm text-abyss/65">{value}</div>
                 </div>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function CTASection() {
           >
             <div
               className="p-8 md:p-10 rounded-2xl"
-              style={{ background: '#111829', border: '1px solid rgba(255,255,255,0.08)' }}
+              style={{ background: '#DDF0E5', border: '1px solid rgba(26,48,40,0.1)' }}
             >
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
@@ -84,13 +84,13 @@ export default function CTASection() {
                   >
                     <PaperPlaneTilt size={24} weight="light" className="text-accent" />
                   </div>
-                  <h3 className="text-xl font-semibold text-frost mb-2">Message sent</h3>
-                  <p className="text-sm text-frost-dim">We will be in touch within 24 hours.</p>
+                  <h3 className="text-xl font-semibold text-abyss mb-2">Message sent</h3>
+                  <p className="text-sm text-abyss/60">We will be in touch within 24 hours.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-frost mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-abyss mb-2">
                       Full name
                     </label>
                     <input

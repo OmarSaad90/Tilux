@@ -58,7 +58,7 @@ export default function Testimonials() {
           <span className="inline-block text-[11px] font-medium text-accent uppercase tracking-[0.2em] mb-5">
             What clients say
           </span>
-          <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
             In their own words.
           </h2>
         </motion.div>
@@ -66,14 +66,14 @@ export default function Testimonials() {
         {/* Featured testimonial */}
         <motion.div
           className="mb-4 p-8 md:p-12 rounded-2xl"
-          style={{ background: '#192037', border: '1px solid rgba(255,255,255,0.08)' }}
+          style={{ background: '#CCE5D4', border: '1px solid rgba(26,48,40,0.1)' }}
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <Stars />
-          <blockquote className="mt-5 text-xl md:text-2xl font-light text-frost leading-relaxed" style={{ maxWidth: '64ch' }}>
+          <blockquote className="mt-5 text-xl md:text-2xl font-light text-abyss leading-relaxed" style={{ maxWidth: '64ch' }}>
             "{featured.quote}"
           </blockquote>
           <div className="mt-6 flex items-center gap-3">
@@ -84,8 +84,8 @@ export default function Testimonials() {
               {featured.name[0]}
             </div>
             <div>
-              <div className="text-sm font-semibold text-frost">{featured.name}</div>
-              <div className="text-xs text-frost-muted">{featured.role} - {featured.city}</div>
+              <div className="text-sm font-semibold text-abyss">{featured.name}</div>
+              <div className="text-xs text-abyss/50">{featured.role} - {featured.city}</div>
             </div>
           </div>
         </motion.div>
@@ -96,14 +96,14 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               className="p-7 rounded-2xl"
-              style={{ background: '#111829', border: '1px solid rgba(255,255,255,0.07)' }}
+              style={{ background: '#D8EEE0', border: '1px solid rgba(26,48,40,0.08)' }}
               initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
               <Stars />
-              <blockquote className="mt-4 text-base text-frost-dim leading-relaxed">
+              <blockquote className="mt-4 text-base text-abyss/65 leading-relaxed">
                 "{t.quote}"
               </blockquote>
               <div className="mt-5 flex items-center gap-2.5">
@@ -114,8 +114,8 @@ export default function Testimonials() {
                   {t.name[0]}
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-frost">{t.name}</div>
-                  <div className="text-xs text-frost-muted">{t.role} - {t.city}</div>
+                  <div className="text-sm font-medium text-abyss">{t.name}</div>
+                  <div className="text-xs text-abyss/50">{t.role} - {t.city}</div>
                 </div>
               </div>
             </motion.div>

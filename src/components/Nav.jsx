@@ -32,11 +32,11 @@ export default function Nav() {
         <div
           className="w-full max-w-4xl flex items-center justify-between px-5 py-2.5 rounded-full transition-all duration-500"
           style={{
-            background: scrolled ? 'rgba(10,14,26,0.88)' : 'rgba(10,14,26,0.25)',
+            background: scrolled ? 'rgba(26,48,40,0.96)' : 'rgba(26,48,40,0.88)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
-            border: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.06)',
-            boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,0.45)' : 'none',
+            border: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)',
+            boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,0.3)' : 'none',
           }}
         >
           {/* Logo */}
@@ -51,7 +51,7 @@ export default function Nav() {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-1.5 text-sm text-frost-dim hover:text-frost rounded-full transition-colors duration-200"
+                className="px-4 py-1.5 text-sm text-frost/70 hover:text-frost rounded-full transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -83,7 +83,7 @@ export default function Nav() {
         {isOpen && (
           <motion.div
             className="fixed inset-0 z-40 flex flex-col items-center justify-center"
-            style={{ background: 'rgba(10,14,26,0.97)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
+            style={{ background: 'rgba(26,48,40,0.97)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
             initial={prefersReducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

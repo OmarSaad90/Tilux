@@ -13,70 +13,70 @@ import TileDivider from './components/TileDivider'
 
 export default function App() {
   return (
-    <div className="text-frost min-h-screen font-sans" style={{ background: '#0A0E1A' }}>
+    <div className="text-abyss min-h-screen font-sans tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
       <Nav />
 
-      {/* Hero — darkest abyss + tile texture */}
-      <div className="tile-texture" style={{ background: '#0A0E1A' }}>
+      {/* Hero — large square tiles, open and spacious */}
+      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
         <Hero />
       </div>
 
-      {/* Stats bar — abyss-mid tonal shift */}
-      <div style={{ background: '#111829' }}>
+      {/* Stats bar */}
+      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
         <StatsBar />
       </div>
 
       <TileDivider tone="neutral" />
 
-      {/* Services — abyss (images carry the visual weight) */}
-      <div style={{ background: '#0A0E1A' }}>
+      {/* Services */}
+      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
         <Services />
       </div>
 
       <TileDivider tone="accent" />
 
-      {/* Process — abyss-mid */}
-      <div style={{ background: '#111829' }}>
+      {/* Process */}
+      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
         <Process />
       </div>
 
       <TileDivider tone="neutral" />
 
-      {/* Gallery — abyss (needed for edge fade effect) */}
-      <div style={{ background: '#0A0E1A' }}>
+      {/* Gallery — large square tiles, lets photos breathe */}
+      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
         <Gallery />
       </div>
 
       <TileDivider tone="accent" />
 
-      {/* Before/After — abyss */}
-      <div style={{ background: '#0A0E1A' }}>
+      {/* Before/After — large square tiles */}
+      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
         <BeforeAfter />
       </div>
 
       <TileDivider tone="neutral" />
 
-      {/* Features — abyss-mid */}
-      <div style={{ background: '#111829' }}>
+      {/* Features */}
+      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
         <Features />
       </div>
 
       <TileDivider tone="neutral" />
 
-      {/* Testimonials — abyss */}
-      <div style={{ background: '#0A0E1A' }}>
+      {/* Testimonials — large square tiles */}
+      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
         <Testimonials />
       </div>
 
       <TileDivider tone="accent" />
 
-      {/* CTA/Contact — abyss-mid + accent tile texture */}
-      <div className="tile-texture-accent" style={{ background: '#111829' }}>
+      {/* CTA/Contact — copper grout */}
+      <div className="tile-texture-accent" style={{ backgroundColor: '#F4F6F4' }}>
         <CTASection />
       </div>
 
-      {/* Footer — deepest */}
-      <div style={{ background: '#0A0E1A' }}>
+      {/* Footer */}
+      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
         <Footer />
       </div>
     </div>

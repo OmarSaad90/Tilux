@@ -26,10 +26,10 @@ export default function Gallery() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
             Recent work
           </h2>
-          <p className="text-base text-frost-dim mt-3">
+          <p className="text-base text-abyss/60 mt-3">
             A selection of completed projects across Ontario and BC.
           </p>
         </motion.div>
@@ -37,7 +37,7 @@ export default function Gallery() {
         {/* Desktop: accordion strips — closed strips look like a tile row */}
         <motion.div
           className="hidden md:flex rounded-2xl overflow-hidden"
-          style={{ height: 540, gap: 3, background: '#1B2336' }}
+          style={{ height: 540, gap: 3, background: '#1A3028' }}
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -112,7 +112,7 @@ export default function Gallery() {
         {/* Mobile: 2x3 grid — same 3px grout gap and rounded container */}
         <div
           className="md:hidden grid grid-cols-2 rounded-2xl overflow-hidden"
-          style={{ gap: 3, background: '#1B2336' }}
+          style={{ gap: 3, background: '#1A3028' }}
         >
           {photos.map((photo) => (
             <div key={photo.src} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>

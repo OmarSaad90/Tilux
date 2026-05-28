@@ -98,8 +98,8 @@ function BeforeAfterSlider({
           }}
         >
           <div className="flex gap-[3px]">
-            <div className="w-0.5 h-4 rounded-full" style={{ background: '#0A0E1A' }} />
-            <div className="w-0.5 h-4 rounded-full" style={{ background: '#0A0E1A' }} />
+            <div className="w-0.5 h-4 rounded-full" style={{ background: '#1A3028' }} />
+            <div className="w-0.5 h-4 rounded-full" style={{ background: '#1A3028' }} />
           </div>
         </div>
       </div>
@@ -121,10 +121,10 @@ export default function BeforeAfter() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl font-semibold text-frost tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
             The transformation
           </h2>
-          <p className="text-base text-frost-dim mt-3">
+          <p className="text-base text-abyss/60 mt-3">
             Drag to reveal the before and after.
           </p>
         </motion.div>
