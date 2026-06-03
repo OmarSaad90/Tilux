@@ -32,7 +32,7 @@ export default function Nav() {
         <div
           className="w-full max-w-4xl flex items-center justify-between px-5 py-2.5 rounded-full transition-all duration-500"
           style={{
-            background: scrolled ? 'rgba(26,48,40,0.96)' : 'rgba(26,48,40,0.88)',
+            background: scrolled ? 'rgba(40,32,15,0.96)' : 'rgba(40,32,15,0.88)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
             border: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(255,255,255,0.08)',
@@ -83,7 +83,7 @@ export default function Nav() {
         {isOpen && (
           <motion.div
             className="fixed inset-0 z-40 flex flex-col items-center justify-center"
-            style={{ background: 'rgba(26,48,40,0.97)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
+            style={{ background: 'rgba(40,32,15,0.97)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}
             initial={prefersReducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

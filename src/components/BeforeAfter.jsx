@@ -56,7 +56,7 @@ function BeforeAfterSlider({
         />
         <span
           className="absolute top-4 right-4 font-mono text-[10px] uppercase tracking-[0.2em]"
-          style={{ color: 'rgba(150,174,203,0.7)' }}
+          style={{ color: 'rgba(200,180,155,0.8)' }}
         >
           {afterLabel}
         </span>
@@ -76,7 +76,7 @@ function BeforeAfterSlider({
         />
         <span
           className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.2em]"
-          style={{ color: 'rgba(150,174,203,0.7)' }}
+          style={{ color: 'rgba(200,180,155,0.8)' }}
         >
           {beforeLabel}
         </span>
@@ -98,8 +98,8 @@ function BeforeAfterSlider({
           }}
         >
           <div className="flex gap-[3px]">
-            <div className="w-0.5 h-4 rounded-full" style={{ background: '#1A3028' }} />
-            <div className="w-0.5 h-4 rounded-full" style={{ background: '#1A3028' }} />
+            <div className="w-0.5 h-4 rounded-full" style={{ background: '#28200F' }} />
+            <div className="w-0.5 h-4 rounded-full" style={{ background: '#28200F' }} />
           </div>
         </div>
       </div>

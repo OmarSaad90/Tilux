@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 
 const photos = [
-  { src: 'https://loremflickr.com/800/1080/kitchen,marble,tiles?lock=11',               mobileSrc: 'https://loremflickr.com/600/800/kitchen,marble,tiles?lock=11',               label: 'White marble kitchen',  location: 'Toronto, ON' },
-  { src: 'https://loremflickr.com/800/1080/bathroom,tiles,dark?lock=12',                mobileSrc: 'https://loremflickr.com/600/800/bathroom,tiles,dark?lock=12',                label: 'Matte black bathroom',  location: 'Vancouver, BC' },
-  { src: 'https://loremflickr.com/800/1080/floor,tiles,wood?lock=13',                   mobileSrc: 'https://loremflickr.com/600/800/floor,tiles,wood?lock=13',                   label: 'Timber-look floor',     location: 'Calgary, AB' },
-  { src: 'https://loremflickr.com/800/1080/outdoor,patio,stone?lock=14',                mobileSrc: 'https://loremflickr.com/600/800/outdoor,patio,stone?lock=14',                label: 'Outdoor stone patio',   location: 'Mississauga, ON' },
-  { src: 'https://images.unsplash.com/photo-1506367797262-92b157df3c61?w=800&h=1080&fit=crop&q=80', mobileSrc: 'https://images.unsplash.com/photo-1506367797262-92b157df3c61?w=600&h=800&fit=crop&q=80', label: 'Hex tile shower',       location: 'Ottawa, ON' },
-  { src: 'https://images.unsplash.com/photo-1523350165414-082d792c4bcc?w=800&h=1080&fit=crop&q=80', mobileSrc: 'https://images.unsplash.com/photo-1523350165414-082d792c4bcc?w=600&h=800&fit=crop&q=80', label: 'Slate kitchen floor',   location: 'Edmonton, AB' },
+  { src: '/photos/gallery-shower-beige.jpg',        mobileSrc: '/photos/gallery-shower-beige.jpg',        label: 'LED shower enclosure',     location: 'Toronto, ON' },
+  { src: '/photos/service-stonework.jpg',           mobileSrc: '/photos/service-stonework.jpg',           label: 'Travertine stone counter', location: 'Toronto, ON' },
+  { src: '/photos/gallery-marble-sink.jpg',        mobileSrc: '/photos/gallery-marble-sink.jpg',        label: 'Calacatta marble vanity',   location: 'Toronto, ON' },
+  { src: '/photos/gallery-beige-bathroom.jpg',     mobileSrc: '/photos/gallery-beige-bathroom.jpg',     label: 'Warm stone bathroom',      location: 'Mississauga, ON' },
+  { src: '/photos/gallery-herringbone.jpg',        mobileSrc: '/photos/gallery-herringbone.jpg',        label: 'Herringbone wood-look floor', location: 'Toronto, ON' },
+  { src: '/photos/gallery-hex-pattern.jpg',        mobileSrc: '/photos/gallery-hex-pattern.jpg',        label: 'Hex tile floor',           location: 'Mississauga, ON' },
 ]
 
 export default function Gallery() {
@@ -30,14 +30,14 @@ export default function Gallery() {
             Recent work
           </h2>
           <p className="text-base text-abyss/60 mt-3">
-            A selection of completed projects across Ontario and BC.
+            A selection of completed projects across Toronto and Mississauga.
           </p>
         </motion.div>
 
         {/* Desktop: accordion strips — closed strips look like a tile row */}
         <motion.div
           className="hidden md:flex rounded-2xl overflow-hidden"
-          style={{ height: 540, gap: 3, background: '#1A3028' }}
+          style={{ height: 540, gap: 3, background: '#28200F' }}
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -68,8 +68,8 @@ export default function Gallery() {
                   className="absolute inset-0"
                   style={{
                     background: isActive
-                      ? 'linear-gradient(to top, rgba(10,14,26,0.88) 0%, rgba(10,14,26,0.08) 55%, transparent 100%)'
-                      : 'rgba(10,14,26,0.48)',
+                      ? 'linear-gradient(to top, rgba(20,15,8,0.88) 0%, rgba(20,15,8,0.08) 55%, transparent 100%)'
+                      : 'rgba(20,15,8,0.48)',
                     transition: prefersReducedMotion ? 'none' : 'background 0.4s ease',
                   }}
                 />
@@ -112,7 +112,7 @@ export default function Gallery() {
         {/* Mobile: 2x3 grid — same 3px grout gap and rounded container */}
         <div
           className="md:hidden grid grid-cols-2 rounded-2xl overflow-hidden"
-          style={{ gap: 3, background: '#1A3028' }}
+          style={{ gap: 3, background: '#28200F' }}
         >
           {photos.map((photo) => (
             <div key={photo.src} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
@@ -124,7 +124,7 @@ export default function Gallery() {
               />
               <div
                 className="absolute inset-0 flex flex-col justify-end p-4"
-                style={{ background: 'linear-gradient(to top, rgba(10,14,26,0.82) 0%, transparent 55%)' }}
+                style={{ background: 'linear-gradient(to top, rgba(20,15,8,0.82) 0%, transparent 55%)' }}
               >
                 <div className="text-xs font-medium text-frost">{photo.label}</div>
                 <div className="text-[10px] text-frost-muted mt-0.5">{photo.location}</div>

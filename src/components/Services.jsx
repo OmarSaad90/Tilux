@@ -6,33 +6,22 @@ const services = [
     id: 'kitchen',
     title: 'Kitchen Tiling',
     description: 'Backsplashes, floors, and feature walls. Built to handle heat, splashes, and daily use without losing an inch of style.',
-    image: 'https://images.unsplash.com/photo-1722605090433-41d1183a792d?w=900&h=600&fit=crop&q=80',
-    span: 'lg:col-span-7 lg:row-span-2',
-    tall: true,
+    image: '/photos/service-kitchen.jpg',
+    span: 'lg:row-span-2',
   },
   {
     id: 'bathroom',
     title: 'Bathroom Renovation',
     description: 'Floor-to-ceiling tile installations that hold up against moisture for years.',
-    image: 'https://loremflickr.com/600/500/bathroom,tiles?lock=2',
-    span: 'lg:col-span-5',
-    tall: false,
+    image: '/photos/service-bathroom.jpg',
+    span: '',
   },
   {
     id: 'floors',
     title: 'Floor Installation',
     description: 'Herringbone, large-format, and custom patterns laid with precision across every room.',
-    image: 'https://loremflickr.com/600/500/floor,tiles,herringbone?lock=3',
-    span: 'lg:col-span-5',
-    tall: false,
-  },
-  {
-    id: 'outdoor',
-    title: 'Outdoor Spaces',
-    description: 'Patios, pool surrounds, and entryways built to endure the elements without compromise.',
-    image: 'https://loremflickr.com/1200/500/outdoor,patio,stone?lock=4',
-    span: 'lg:col-span-12',
-    tall: false,
+    image: '/photos/service-floor.jpg',
+    span: '',
   },
 ]
 
@@ -59,8 +48,8 @@ export default function Services() {
 
         {/* Bento grid — grout-line treatment: container bg shows as grout between tiles */}
         <div
-          className="p-1.5 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-1.5 lg:grid-rows-[320px_320px_280px]"
-          style={{ background: '#1A3028' }}
+          className="p-1.5 rounded-3xl grid grid-cols-1 lg:grid-cols-[13fr_11fr] gap-1.5 lg:grid-rows-[360px_360px]"
+          style={{ background: '#28200F' }}
         >
           {services.map((service, i) => (
             <motion.div
@@ -82,7 +71,7 @@ export default function Services() {
               {/* Gradient overlay */}
               <div
                 className="absolute inset-0"
-                style={{ background: 'linear-gradient(to top, rgba(10,14,26,0.85) 0%, rgba(10,14,26,0.2) 60%, transparent 100%)' }}
+                style={{ background: 'linear-gradient(to top, rgba(20,15,8,0.85) 0%, rgba(20,15,8,0.2) 60%, transparent 100%)' }}
               />
 
               {/* Content */}

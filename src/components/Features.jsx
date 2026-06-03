@@ -4,8 +4,8 @@ import { Certificate, Clock, Wrench, Handshake } from '@phosphor-icons/react'
 const features = [
   {
     icon: Certificate,
-    title: 'Licensed and insured',
-    description: 'Every job is covered. No liability surprises for you or your home.',
+    title: 'Experienced professionals',
+    description: 'Years of hands-on trade experience on every job. No subcontracting, no shortcuts.',
   },
   {
     icon: Handshake,
@@ -51,10 +51,10 @@ export default function Features() {
             </p>
             <a
               href="#process"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-light transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-base font-bold text-accent-dim hover:text-accent transition-colors duration-200"
             >
               How we work
-              <span className="text-xs">-&gt;</span>
+              <span>→</span>
             </a>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function Features() {
                 <motion.div
                   key={feature.title}
                   className="flex gap-5 py-8"
-                  style={i < features.length - 1 ? { borderBottom: '1px solid rgba(26,48,40,0.08)' } : {}}
+                  style={i < features.length - 1 ? { borderBottom: '1px solid rgba(40,32,15,0.08)' } : {}}
                   initial={prefersReducedMotion ? false : { opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
@@ -74,7 +74,7 @@ export default function Features() {
                 >
                   <div
                     className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center mt-0.5"
-                    style={{ background: 'rgba(200,146,90,0.1)', border: '1px solid rgba(200,146,90,0.18)' }}
+                    style={{ background: '#28200F' }}
                   >
                     <Icon size={20} weight="light" className="text-accent" />
                   </div>

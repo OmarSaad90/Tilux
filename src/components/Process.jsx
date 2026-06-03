@@ -37,7 +37,7 @@ export default function Process() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="inline-block text-[11px] font-medium text-accent uppercase tracking-[0.2em] mb-5">
+            <span className="inline-block text-[13px] font-semibold text-accent-dim uppercase tracking-[0.2em] mb-5">
               How it works
             </span>
             <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
@@ -50,18 +50,13 @@ export default function Process() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Vertical connecting line — desktop only */}
-          <div
-            className="hidden lg:block absolute left-[1.9rem] top-8 bottom-8 w-px"
-            style={{ background: 'linear-gradient(to bottom, rgba(200,146,90,0.4), rgba(200,146,90,0.1))' }}
-          />
 
           <div className="flex flex-col gap-0">
             {steps.map((step, i) => (
               <motion.div
                 key={step.number}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start py-10"
-                style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(26,48,40,0.1)' } : {}}
+                style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(40,32,15,0.1)' } : {}}
                 initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -72,12 +67,11 @@ export default function Process() {
                   <div
                     className="w-10 h-10 flex items-center justify-center shrink-0"
                     style={{
-                      background: 'rgba(200,146,90,0.1)',
-                      border: '1px solid rgba(200,146,90,0.28)',
+                      background: '#C8925A',
                       borderRadius: 4,
                     }}
                   >
-                    <span className="font-mono text-xs font-bold text-accent tracking-widest">{step.number}</span>
+                    <span className="font-mono text-xs font-bold tracking-widest" style={{ color: '#28200F' }}>{step.number}</span>
                   </div>
                 </div>
 

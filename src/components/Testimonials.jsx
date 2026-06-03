@@ -4,7 +4,7 @@ import { Star } from '@phosphor-icons/react'
 const testimonials = [
   {
     quote:
-      "The tile work is flawless, the grout lines are perfectly even, and the crew finished two days ahead of schedule. I have already referred three neighbors.",
+      "I wasn't home for most of the job and honestly that made me nervous. But they'd send me updates, the place was clean every time I checked, and by the end I had zero notes. Not one thing I wanted changed. That almost never happens with any kind of renovation.",
     name: 'Maria K.',
     role: 'Homeowner',
     city: 'Toronto, ON',
@@ -12,18 +12,18 @@ const testimonials = [
   },
   {
     quote:
-      "After two poor experiences with other contractors, Tilux restored my confidence. The kitchen backsplash is exactly what we wanted. Precise, clean, done.",
+      "Got three quotes, two of them couldn't even give me a real timeline. Tilux said five days and finished in five days. Exactly what was on the invoice, nothing added at the end.",
     name: 'James P.',
     role: 'Homeowner',
-    city: 'Vancouver, BC',
+    city: 'Mississauga, ON',
     featured: false,
   },
   {
     quote:
-      "They tiled our main floor and both bathrooms. The consistency from room to room is genuinely impressive. You can tell they care about the details.",
+      "Main floor and two bathrooms, all done at the same time. The tiles line up perfectly between rooms, which sounds basic but the last guy I hired couldn't manage it.",
     name: 'Aisha M.',
     role: 'Homeowner',
-    city: 'Calgary, AB',
+    city: 'Toronto, ON',
     featured: false,
   },
 ]
@@ -55,7 +55,7 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="inline-block text-[11px] font-medium text-accent uppercase tracking-[0.2em] mb-5">
+          <span className="inline-block text-[13px] font-semibold text-accent-dim uppercase tracking-[0.2em] mb-5">
             What clients say
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold text-abyss tracking-tight leading-tight">
@@ -66,7 +66,7 @@ export default function Testimonials() {
         {/* Featured testimonial */}
         <motion.div
           className="mb-4 p-8 md:p-12 rounded-2xl"
-          style={{ background: '#CCE5D4', border: '1px solid rgba(26,48,40,0.1)' }}
+          style={{ background: '#E8E0CC', border: '1px solid rgba(40,32,15,0.1)' }}
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -96,7 +96,7 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               className="p-7 rounded-2xl"
-              style={{ background: '#D8EEE0', border: '1px solid rgba(26,48,40,0.08)' }}
+              style={{ background: '#EDE6D4', border: '1px solid rgba(40,32,15,0.08)' }}
               initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}

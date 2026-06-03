@@ -19,7 +19,7 @@ export default function StatsBar() {
             <motion.div
               key={stat.label}
               className={`flex flex-col items-center md:items-start md:px-10 first:md:pl-0 last:md:pr-0 ${i > 0 ? 'md:border-l' : ''}`}
-              style={i > 0 ? { borderLeftColor: 'rgba(26,48,40,0.12)' } : {}}
+              style={i > 0 ? { borderLeftColor: 'rgba(40,32,15,0.12)' } : {}}
               initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}

@@ -13,70 +13,70 @@ import TileDivider from './components/TileDivider'
 
 export default function App() {
   return (
-    <div className="text-abyss min-h-screen font-sans tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
+    <div className="text-abyss min-h-screen font-sans tile-surface" style={{ backgroundColor: '#F7F5EE' }}>
       <Nav />
 
       {/* Hero — large square tiles, open and spacious */}
-      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#F7F5EE' }}>
         <Hero />
       </div>
 
       {/* Stats bar */}
-      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#E6DFD0' }}>
         <StatsBar />
       </div>
 
       <TileDivider tone="neutral" />
 
       {/* Services */}
-      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#F7F5EE' }}>
         <Services />
       </div>
 
       <TileDivider tone="accent" />
 
       {/* Process */}
-      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#E6DFD0' }}>
         <Process />
       </div>
 
       <TileDivider tone="neutral" />
 
       {/* Gallery — large square tiles, lets photos breathe */}
-      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#F7F5EE' }}>
         <Gallery />
       </div>
 
       <TileDivider tone="accent" />
 
       {/* Before/After — large square tiles */}
-      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#E6DFD0' }}>
         <BeforeAfter />
       </div>
 
       <TileDivider tone="neutral" />
 
       {/* Features */}
-      <div className="tile-surface" style={{ backgroundColor: '#F4F6F4' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#F7F5EE' }}>
         <Features />
       </div>
 
       <TileDivider tone="neutral" />
 
       {/* Testimonials — large square tiles */}
-      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#E6DFD0' }}>
         <Testimonials />
       </div>
 
       <TileDivider tone="accent" />
 
       {/* CTA/Contact — copper grout */}
-      <div className="tile-texture-accent" style={{ backgroundColor: '#F4F6F4' }}>
+      <div className="tile-texture-accent" style={{ backgroundColor: '#F7F5EE' }}>
         <CTASection />
       </div>
 
       {/* Footer */}
-      <div className="tile-surface" style={{ backgroundColor: '#EBF3EE' }}>
+      <div className="tile-surface" style={{ backgroundColor: '#E6DFD0' }}>
         <Footer />
       </div>
     </div>

@@ -13,15 +13,14 @@ export default function CTASection() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Replace with actual form submission logic
     setSent(true)
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-xl text-abyss text-sm placeholder-[rgba(26,48,40,0.4)] focus:outline-none focus:ring-2 focus:ring-[rgba(200,146,90,0.5)] transition-all duration-200'
+    'w-full px-4 py-3 rounded-xl text-abyss text-sm placeholder-[rgba(40,32,15,0.4)] focus:outline-none focus:ring-2 focus:ring-[rgba(200,146,90,0.5)] transition-all duration-200'
   const inputStyle = {
-    background: 'rgba(26,48,40,0.04)',
-    border: '1px solid rgba(26,48,40,0.12)',
+    background: 'rgba(40,32,15,0.04)',
+    border: '1px solid rgba(40,32,15,0.12)',
   }
 
   return (
@@ -54,7 +53,7 @@ export default function CTASection() {
               {[
                 { label: 'Email', value: 'hello@tiluxstudio.ca' },
                 { label: 'Phone', value: '+1 (416) 555-0192' },
-                { label: 'Service area', value: 'Greater Toronto Area and beyond' },
+                { label: 'Service area', value: 'Toronto & Mississauga' },
               ].map(({ label, value }) => (
                 <div key={label}>
                   <div className="text-[11px] text-abyss/45 uppercase tracking-[0.15em] mb-0.5">{label}</div>
@@ -74,7 +73,7 @@ export default function CTASection() {
           >
             <div
               className="p-8 md:p-10 rounded-2xl"
-              style={{ background: '#DDF0E5', border: '1px solid rgba(26,48,40,0.1)' }}
+              style={{ background: '#EDE6D4', border: '1px solid rgba(40,32,15,0.1)' }}
             >
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
@@ -108,7 +107,7 @@ export default function CTASection() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-frost mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-abyss mb-2">
                       Email address
                     </label>
                     <input
@@ -126,7 +125,7 @@ export default function CTASection() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-frost mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-abyss mb-2">
                       Project details
                     </label>
                     <textarea
