@@ -51,9 +51,9 @@ export default function CTASection() {
 
             <div className="flex flex-col gap-4">
               {[
-                { label: 'Email', value: 'hello@tiluxstudio.ca' },
-                { label: 'Phone', value: '+1 (416) 555-0192' },
-                { label: 'Service area', value: 'Toronto & Mississauga' },
+                { label: 'Email', value: 'info@tiluxstudio.ca' },
+                { label: 'Phone', value: '+1 (437) 299-0347' },
+                { label: 'Service area', value: 'GTA, Ontario' },
               ].map(({ label, value }) => (
                 <div key={label}>
                   <div className="text-[11px] text-abyss/45 uppercase tracking-[0.15em] mb-0.5">{label}</div>

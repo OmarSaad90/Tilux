@@ -4,10 +4,11 @@ import { motion, useReducedMotion } from 'motion/react'
 const photos = [
   { src: '/photos/gallery-shower-beige.jpg',        mobileSrc: '/photos/gallery-shower-beige.jpg',        label: 'LED shower enclosure',     location: 'Toronto, ON' },
   { src: '/photos/service-stonework.jpg',           mobileSrc: '/photos/service-stonework.jpg',           label: 'Travertine stone counter', location: 'Toronto, ON' },
-  { src: '/photos/gallery-marble-sink.jpg',        mobileSrc: '/photos/gallery-marble-sink.jpg',        label: 'Calacatta marble vanity',   location: 'Toronto, ON' },
   { src: '/photos/gallery-beige-bathroom.jpg',     mobileSrc: '/photos/gallery-beige-bathroom.jpg',     label: 'Warm stone bathroom',      location: 'Mississauga, ON' },
   { src: '/photos/gallery-herringbone.jpg',        mobileSrc: '/photos/gallery-herringbone.jpg',        label: 'Herringbone wood-look floor', location: 'Toronto, ON' },
   { src: '/photos/gallery-hex-pattern.jpg',        mobileSrc: '/photos/gallery-hex-pattern.jpg',        label: 'Hex tile floor',           location: 'Mississauga, ON' },
+  { src: '/photos/gallery-marble-vanity.jpg',     mobileSrc: '/photos/gallery-marble-vanity.jpg',     label: 'Calacatta feature wall',   location: 'Toronto, ON' },
+  { src: '/photos/gallery-shower-bench.jpg',      mobileSrc: '/photos/gallery-shower-bench.jpg',      label: 'Stone shower bench',       location: 'Toronto, ON' },
 ]
 
 export default function Gallery() {
@@ -59,7 +60,16 @@ export default function Gallery() {
                 <img
                   src={photo.src}
                   alt={photo.label}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute left-0 top-0 w-full object-cover"
+                  style={{
+                    height: '130%',
+                    transform: isActive ? 'translateY(-23%)' : 'translateY(0%)',
+                    transition: prefersReducedMotion
+                      ? 'none'
+                      : isActive
+                        ? 'transform 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                        : 'transform 0.6s ease',
+                  }}
                   loading="lazy"
                 />
 
@@ -114,8 +124,12 @@ export default function Gallery() {
           className="md:hidden grid grid-cols-2 rounded-2xl overflow-hidden"
           style={{ gap: 3, background: '#28200F' }}
         >
-          {photos.map((photo) => (
-            <div key={photo.src} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
+          {photos.map((photo, i) => (
+            <div
+              key={photo.src}
+              className={`relative overflow-hidden${i === photos.length - 1 && photos.length % 2 !== 0 ? ' col-span-2' : ''}`}
+              style={{ aspectRatio: i === photos.length - 1 && photos.length % 2 !== 0 ? '16/9' : '3/4' }}
+            >
               <img
                 src={photo.mobileSrc}
                 alt={photo.label}

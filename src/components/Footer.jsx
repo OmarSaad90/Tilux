@@ -43,18 +43,18 @@ export default function Footer() {
             <div className="text-[11px] text-abyss/55 uppercase tracking-[0.15em] mb-4 font-medium">Contact</div>
             <div className="flex flex-col gap-2.5">
               <a
-                href="mailto:hello@tiluxstudio.ca"
+                href="mailto:info@tiluxstudio.ca"
                 className="text-sm text-abyss/75 hover:text-abyss transition-colors duration-200"
               >
-                hello@tiluxstudio.ca
+                info@tiluxstudio.ca
               </a>
               <a
-                href="tel:+14165550192"
+                href="tel:+14372990347"
                 className="text-sm text-abyss/75 hover:text-abyss transition-colors duration-200"
               >
-                +1 (416) 555-0192
+                +1 (437) 299-0347
               </a>
-              <span className="text-sm text-abyss/65">Toronto & Mississauga</span>
+              <span className="text-sm text-abyss/65">GTA, Ontario</span>
             </div>
           </div>
 
