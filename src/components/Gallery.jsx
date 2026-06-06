@@ -5,10 +5,10 @@ const photos = [
   { src: '/photos/gallery-shower-beige.jpg',        mobileSrc: '/photos/gallery-shower-beige.jpg',        label: 'LED shower enclosure',     location: 'Toronto, ON' },
   { src: '/photos/service-stonework.jpg',           mobileSrc: '/photos/service-stonework.jpg',           label: 'Travertine stone counter', location: 'Toronto, ON' },
   { src: '/photos/gallery-beige-bathroom.jpg',     mobileSrc: '/photos/gallery-beige-bathroom.jpg',     label: 'Warm stone bathroom',      location: 'Mississauga, ON' },
-  { src: '/photos/gallery-herringbone.jpg',        mobileSrc: '/photos/gallery-herringbone.jpg',        label: 'Herringbone wood-look floor', location: 'Toronto, ON' },
   { src: '/photos/gallery-hex-pattern.jpg',        mobileSrc: '/photos/gallery-hex-pattern.jpg',        label: 'Hex tile floor',           location: 'Mississauga, ON' },
   { src: '/photos/gallery-marble-vanity.jpg',     mobileSrc: '/photos/gallery-marble-vanity.jpg',     label: 'Calacatta feature wall',   location: 'Toronto, ON' },
   { src: '/photos/gallery-shower-bench.jpg',      mobileSrc: '/photos/gallery-shower-bench.jpg',      label: 'Stone shower bench',       location: 'Toronto, ON' },
+  { src: 'https://images.pexels.com/photos/19227243/pexels-photo-19227243.jpeg?auto=compress&cs=tinysrgb&w=700&h=1050&fit=crop', mobileSrc: 'https://images.pexels.com/photos/19227243/pexels-photo-19227243.jpeg?auto=compress&cs=tinysrgb&w=700&h=1050&fit=crop', label: 'Frameless glass shower', location: 'Toronto, ON' },
 ]
 
 export default function Gallery() {

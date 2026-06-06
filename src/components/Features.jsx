@@ -56,10 +56,19 @@ export default function Features() {
               How we work
               <span>→</span>
             </a>
+
+            <div className="mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
+              <img
+                src="https://images.pexels.com/photos/6782431/pexels-photo-6782431.jpeg?auto=compress&cs=tinysrgb&w=560&h=420&fit=crop"
+                alt="Marble tile installation detail by Tilux Studio"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </motion.div>
 
           {/* Right — feature list */}
-          <div className="lg:col-span-7 flex flex-col gap-0">
+          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-0 lg:pt-36">
             {features.map((feature, i) => {
               const Icon = feature.icon
               return (

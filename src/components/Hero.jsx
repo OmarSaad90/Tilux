@@ -130,8 +130,8 @@ export default function Hero() {
                 {/* Inner core */}
                 <div className="relative overflow-hidden rounded-[calc(2rem-0.5rem)]" style={{ aspectRatio: '3/4' }}>
                   <img
-                    src="/photos/hero-bathroom-mirror.jpg"
-                    alt="Precision tile installation by Tilux Studio"
+                    src="https://images.pexels.com/photos/35189706/pexels-photo-35189706.jpeg?auto=compress&cs=tinysrgb&w=840&h=1120&fit=crop"
+                    alt="Luxury kitchen tile installation by Tilux Studio"
                     className="w-full h-full object-cover"
                     loading="eager"
                     fetchPriority="high"
@@ -158,7 +158,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1.1, ease: [0.19, 1.0, 0.22, 1.0] }}
               >
                 <div className="text-[11px] mb-0.5 uppercase tracking-wide font-medium" style={{ color: 'rgba(240,237,228,0.55)' }}>Latest project</div>
-                <div className="text-sm font-semibold" style={{ color: '#E8F0EB' }}>Bathroom renovation, Toronto</div>
+                <div className="text-sm font-semibold" style={{ color: '#E8F0EB' }}>Kitchen renovation, Toronto</div>
               </motion.div>
 
               {/* Floating accent dot */}

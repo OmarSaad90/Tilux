@@ -2,8 +2,8 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 
 function BeforeAfterSlider({
-  beforeImage = 'https://images.unsplash.com/photo-1570881826833-ad7b98b7dffe?w=1200&h=700&fit=crop&q=80',
-  afterImage  = 'https://images.unsplash.com/photo-1600328604921-300918f36018?w=1200&h=700&fit=crop&q=80',
+  beforeImage = 'https://images.pexels.com/photos/6045209/pexels-photo-6045209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop',
+  afterImage  = 'https://images.pexels.com/photos/35493890/pexels-photo-35493890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop',
   beforeLabel = 'BEFORE',
   afterLabel  = 'AFTER',
 }) {

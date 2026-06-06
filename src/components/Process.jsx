@@ -28,7 +28,6 @@ export default function Process() {
     <section id="process" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20">
           <motion.div
             className="lg:col-span-8"
@@ -48,46 +47,35 @@ export default function Process() {
           </motion.div>
         </div>
 
-        {/* Steps */}
-        <div className="relative">
-
-          <div className="flex flex-col gap-0">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.number}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start py-10"
-                style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(40,32,15,0.1)' } : {}}
-                initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              >
-                {/* Number — styled as a square tile */}
-                <div className="lg:col-span-1 flex items-start">
-                  <div
-                    className="w-10 h-10 flex items-center justify-center shrink-0"
-                    style={{
-                      background: '#C8925A',
-                      borderRadius: 4,
-                    }}
-                  >
-                    <span className="font-mono text-xs font-bold tracking-widest" style={{ color: '#28200F' }}>{step.number}</span>
-                  </div>
+        <div className="flex flex-col gap-0">
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.number}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start py-10"
+              style={i < steps.length - 1 ? { borderBottom: '1px solid rgba(40,32,15,0.1)' } : {}}
+              initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <div className="lg:col-span-1 flex items-start">
+                <div
+                  className="w-10 h-10 flex items-center justify-center shrink-0"
+                  style={{ background: '#C8925A', borderRadius: 4 }}
+                >
+                  <span className="font-mono text-xs font-bold tracking-widest" style={{ color: '#28200F' }}>{step.number}</span>
                 </div>
-
-                {/* Title */}
-                <div className="lg:col-span-3">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-abyss">{step.title}</h3>
-                </div>
-
-                {/* Description */}
-                <div className="lg:col-span-7 lg:col-start-5">
-                  <p className="text-base text-abyss/60 leading-relaxed">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+              <div className="lg:col-span-3">
+                <h3 className="text-2xl md:text-3xl font-semibold text-abyss">{step.title}</h3>
+              </div>
+              <div className="lg:col-span-7 lg:col-start-5">
+                <p className="text-base text-abyss/60 leading-relaxed">{step.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   )

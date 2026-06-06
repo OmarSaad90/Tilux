@@ -13,7 +13,7 @@ const services = [
     id: 'bathroom',
     title: 'Bathroom Renovation',
     description: 'Floor-to-ceiling tile installations that hold up against moisture for years.',
-    image: '/photos/service-bathroom.jpg',
+    image: 'https://images.pexels.com/photos/6585765/pexels-photo-6585765.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop',
     span: '',
   },
   {
