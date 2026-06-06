@@ -115,7 +115,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="text-sm font-medium text-abyss">{t.name}</div>
-                  <div className="text-xs text-abyss/50">{t.role} — {t.city}</div>
+                  <div className="text-xs text-abyss/50">{t.role}, {t.city}</div>
                 </div>
               </div>
             </motion.div>
