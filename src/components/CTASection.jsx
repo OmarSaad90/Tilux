@@ -6,14 +6,29 @@ export default function CTASection() {
   const prefersReducedMotion = useReducedMotion()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSent(true)
+    setSubmitting(true)
+    setError(false)
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ 'form-name': 'contact', ...form }).toString(),
+      })
+      setSent(true)
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const inputClass =
@@ -51,7 +66,7 @@ export default function CTASection() {
 
             <div className="flex flex-col gap-4">
               {[
-                { label: 'Email', value: 'info@tiluxstudio.ca' },
+                { label: 'Email', value: 'info@tilux.ca' },
                 { label: 'Phone', value: '+1 (437) 299-0347' },
                 { label: 'Service area', value: 'GTA, Ontario' },
               ].map(({ label, value }) => (
@@ -141,11 +156,16 @@ export default function CTASection() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-sm text-red-500">Something went wrong. Try emailing us directly.</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="group w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-accent text-abyss font-semibold text-sm hover:bg-accent-light transition-colors duration-300 active:scale-[0.98]"
+                    disabled={submitting}
+                    className="group w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-accent text-abyss font-semibold text-sm hover:bg-accent-light transition-colors duration-300 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {submitting ? 'Sending…' : 'Send Message'}
                     <span className="w-6 h-6 rounded-full bg-abyss/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300 shrink-0">
                       <PaperPlaneTilt size={11} weight="bold" />
                     </span>

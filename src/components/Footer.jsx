@@ -43,10 +43,10 @@ export default function Footer() {
             <div className="text-[11px] text-abyss/55 uppercase tracking-[0.15em] mb-4 font-medium">Contact</div>
             <div className="flex flex-col gap-2.5">
               <a
-                href="mailto:info@tiluxstudio.ca"
+                href="mailto:info@tilux.ca"
                 className="text-sm text-abyss/75 hover:text-abyss transition-colors duration-200"
               >
-                info@tiluxstudio.ca
+                info@tilux.ca
               </a>
               <a
                 href="tel:+14372990347"
