@@ -4,7 +4,7 @@ import { Star } from '@phosphor-icons/react'
 const testimonials = [
   {
     quote:
-      "I wasn't home for most of the job and honestly that made me nervous. But they'd send me updates, the place was clean every time I checked, and by the end I had zero notes. Not one thing I wanted changed. That almost never happens with any kind of renovation.",
+      "I wasn't home for most of the job which made me nervous, but they sent me updates, the place was clean every time I checked, and by the end I had zero notes. Not one thing I wanted changed. That almost never happenned to me with any kind of renovation.",
     name: 'Maria K.',
     role: 'Homeowner',
     city: 'Toronto, ON',
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     quote:
-      "Got three quotes, two of them couldn't even give me a real timeline. Tilux said five days and finished in five days. Exactly what was on the invoice, nothing added at the end.",
+      "Got three quotes previously, two of them couldn't even give me a real timeline. Tilux said five days and finished in five days. Exactly what was on the invoice, nothing extra at the end.",
     name: 'James P.',
     role: 'Homeowner',
     city: 'Mississauga, ON',
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote:
-      "Main floor and two bathrooms, all done at the same time. The tiles line up perfectly between rooms, which sounds basic but the last guy I hired couldn't manage it.",
+      "Main floor and two bathrooms, all done at the same time. The tiles line up perfectly between rooms, everything was clean and flawless.",
     name: 'Aisha M.',
     role: 'Homeowner',
     city: 'Toronto, ON',
@@ -85,7 +85,7 @@ export default function Testimonials() {
             </div>
             <div>
               <div className="text-sm font-semibold text-abyss">{featured.name}</div>
-              <div className="text-xs text-abyss/50">{featured.role} — {featured.city}</div>
+              <div className="text-xs text-abyss/50">{featured.role}, {featured.city}</div>
             </div>
           </div>
         </motion.div>
