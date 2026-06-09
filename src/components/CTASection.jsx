@@ -18,12 +18,20 @@ export default function CTASection() {
     setSubmitting(true)
     setError(false)
     try {
-      await fetch('/', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ 'form-name': 'contact', ...form }).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '3fbe2cb3-69d5-4264-82a1-5418bbcbfa75',
+          ...form,
+        }),
       })
-      setSent(true)
+      const data = await res.json()
+      if (data.success) {
+        setSent(true)
+      } else {
+        setError(true)
+      }
     } catch {
       setError(true)
     } finally {
