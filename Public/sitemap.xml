@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tilux.ca/</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/hero-bathroom-mirror.jpg</image:loc>
+      <image:title>Luxury bathroom tile installation by Tilux Studio, Toronto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/service-kitchen.jpg</image:loc>
+      <image:title>Kitchen tile installation by Tilux Studio, GTA</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/gallery-shower-beige.jpg</image:loc>
+      <image:title>Custom shower tile installation — Toronto project by Tilux Studio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/gallery-marble-vanity.jpg</image:loc>
+      <image:title>Calacatta marble vanity tile — Toronto project by Tilux Studio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/gallery-herringbone.jpg</image:loc>
+      <image:title>Herringbone wood-look floor tile — Toronto project by Tilux Studio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tilux.ca/photos/gallery-hex-pattern.jpg</image:loc>
+      <image:title>Hex tile floor installation — Mississauga project by Tilux Studio</image:title>
+    </image:image>
+  </url>
+</urlset>
